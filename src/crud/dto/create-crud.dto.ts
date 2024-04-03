@@ -1,6 +1,7 @@
 import { isString } from "util";
 
 export class CreateCrudDto {
+    
     name: string;
     email: string;
     age: number;
