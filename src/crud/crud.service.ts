@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCrudDto } from './dto/create-crud.dto';
 import { UpdateCrudDto } from './dto/update-crud.dto';
-import { Crud } from './crud.model';
+import { Crud } from './crud.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
