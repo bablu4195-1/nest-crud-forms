@@ -3,9 +3,11 @@ import { CrudService } from './crud.service';
 import { CreateCrudDto } from './dto/create-crud.dto';
 import { UpdateCrudDto } from './dto/update-crud.dto';
 import { AuthGuard } from '@nestjs/passport';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Controller('crud')
 @UseGuards(AuthGuard('jwt'))
+@ApiBearerAuth()
 export class CrudController {
   constructor(private readonly crudService: CrudService,) {}
 

@@ -9,6 +9,7 @@ async function bootstrap() {
   .setDescription('Create Read Update and Delete')
   .setVersion('0.1')
   .addTag('crud')
+  .addBearerAuth()
   .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
