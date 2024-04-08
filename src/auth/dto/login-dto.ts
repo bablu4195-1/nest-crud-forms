@@ -1,7 +1,8 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { IsString, Matches, MaxLength, MinLength } from "class-validator";
 
 export class LoginDto {
-   
+    @ApiProperty()
     @IsString()
     @MinLength(4)
     @MaxLength(20)
@@ -13,6 +14,7 @@ export class LoginDto {
     {
       message: 'password too weak'
   })
+    @ApiProperty()
     password: string;
 
 }

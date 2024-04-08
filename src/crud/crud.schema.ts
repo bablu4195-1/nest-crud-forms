@@ -1,12 +1,13 @@
 // user.model.ts
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { ApiProperty } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 
 @Schema()
 export class Crud extends Document {
   @Prop({ required: true, maxlength: 100 })
   name: string;
-
+  
   @Prop({ required: true })
   email: string;
 
